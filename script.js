@@ -58,12 +58,15 @@ const pay = {
     },
     
     //returns new savings to be entered into however you document your finances
-    updatedDocSavings (){
+    documentInstructions (){
         let lTran = this.payCheck * this.percentages.longTransfer;
         let sTran = this.payCheck * this.percentages.shortTransfer;
         return `Total amount to be transferred into savings: $${this.totalSavings}\n
         Amount that is for long term savings: $${lTran}\n
-        Amount that is for short term savings: $${sTran}`
+        Amount that is for short term savings: $${sTran}\n
+        New long: $${this.longSavings + lTran}\n
+        New short: $${this.shortSavings + sTran}\n
+        Donate: $${this.payCheck * this.percentages.donations}`
     },
 };//end of pay object
 
