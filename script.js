@@ -28,7 +28,7 @@ const pay = {
     //calculates and sets total savings by multipliying payCheck by the transfer percentages,
     //also returns calculated total.
     calculateNewSavings () {
-        let total = this.payCheck * (this.percentages.shortTransfer + this.percentages.longTransfer);
+        let total = Math.floor(this.payCheck * (this.percentages.shortTransfer + this.percentages.longTransfer));
         this.totalSavings = total;
         return total;
     },
@@ -59,14 +59,15 @@ const pay = {
     
     //returns new savings to be entered into however you document your finances
     documentInstructions (){
-        let lTran = this.payCheck * this.percentages.longTransfer;
-        let sTran = this.payCheck * this.percentages.shortTransfer;
+        let lTran = Math.floor(this.payCheck * this.percentages.longTransfer);
+        let sTran = Math.floor(this.payCheck * this.percentages.shortTransfer);
+        let don = Math.floor(this.payCheck * this.percentages.donations)
         return `Total amount to be transferred into savings: $${this.totalSavings}\n
         Amount that is for long term savings: $${lTran}\n
         Amount that is for short term savings: $${sTran}\n
         New long: $${this.longSavings + lTran}\n
         New short: $${this.shortSavings + sTran}\n
-        Donate: $${this.payCheck * this.percentages.donations}`
+        Donate: $${this.payCheck + don}`
     },
 };//end of pay object
 
