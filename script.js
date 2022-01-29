@@ -8,15 +8,21 @@ const pay = {
 
     //presets for percentages object, append whenever new preset is needed
     presets: [
+        //responsible boi
         {donations: 0.10,
         shortTransfer: 0.10,
         longTransfer: 0.80,
         spending: 0.00},
-        
+        //a little greedy
         {donations: 0.05,
         shortTransfer: 0.10,
         longTransfer: 0.80,
-        spending: 0.05}
+        spending: 0.05},
+        //goblin
+        {donations: 0.00,
+        shortTransfer: 0.10,
+        longTransfer: 0.80,
+        spending: 0.10}
     ],
 
     //calculates and sets total savings by multipliying payCheck by the transfer percentages,
@@ -27,7 +33,26 @@ const pay = {
         return total;
     },
 
-  };
+    //sets percentages based on certain presets
+    setPercentages(presetSelection){
+        switch (presetSelection){
+            case 1:
+                this.percentages = presets[0];
+                break;
+            case 2: 
+                this.percentages = presets[1];
+                break;
+            case 3: 
+                this.percentages.donations = prompt('Donations percentage', 'Enter percentage (e.g. 0.10)');
+                this.percentages.shortTransfer = prompt('Short savings percentage', 'Enter percentage (e.g. 0.20)');    
+                this.percentages.longTransfer = prompt('Long savings percentage', 'Enter percentage (e.g. 0.70)'); 
+                this.percentages.spending = prompt('Spending percentage', 'Enter percentage (e.g 0.00)');   
+            default:
+                console.log('Error invalid input');
+                break;
+        }
+    }
+  };//end of pay object
 
- 
+
  
