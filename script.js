@@ -67,7 +67,7 @@ const pay = {
         Amount that is for short term savings: $${sTran}\n
         New long: $${this.longSavings + lTran}\n
         New short: $${this.shortSavings + sTran}\n
-        Donate: $${this.payCheck + don}`
+        Donate: $${don}`
     },
 };//end of pay object
 
