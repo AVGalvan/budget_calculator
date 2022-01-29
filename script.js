@@ -28,7 +28,7 @@ const pay = {
     //calculates and sets total savings by multipliying payCheck by the transfer percentages,
     //also returns calculated total.
     calculateNewSavings () {
-        let total = Math.floor(this.payCheck * (this.percentages.shortTransfer + this.percentages.longTransfer));
+        let total = (this.payCheck * (this.percentages.shortTransfer + this.percentages.longTransfer)).toFixed(2);
         this.totalSavings = total;
         return total;
     },
@@ -59,19 +59,21 @@ const pay = {
     
     //returns new savings to be entered into however you document your finances
     documentInstructions (){
-        let lTran = Math.floor(this.payCheck * this.percentages.longTransfer);
-        let sTran = Math.floor(this.payCheck * this.percentages.shortTransfer);
-        let don = Math.floor(this.payCheck * this.percentages.donations)
-        return `Total amount to be transferred into savings: $${this.totalSavings}\n
-        Amount that is for long term savings: $${lTran}\n
-        Amount that is for short term savings: $${sTran}\n
-        New long: $${this.longSavings + lTran}\n
-        New short: $${this.shortSavings + sTran}\n
-        Donate: $${don}`
+        let lTran = (this.payCheck * this.percentages.longTransfer);
+        let sTran = (this.payCheck * this.percentages.shortTransfer);
+        let don = (this.payCheck * this.percentages.donations);
+        let spend =(this.payCheck * this.percentages.spending);
+        return 'Total amount to be transferred into savings: $' + this.totalSavings + 
+        '\nAmount that is for long term savings: $' + lTran.toFixed(2) +
+        '\nAmount that is for short term savings: $'+ sTran.toFixed(2) +
+        '\nNew long: $' + (this.longSavings + lTran).toFixed(2) +
+        '\nNew short: $' + (this.shortSavings + sTran).toFixed(2) +
+        '\nDonate: $' + don.toFixed(2) + 
+        '\nSpend: $' + spend.toFixed(2);
     },
 };//end of pay object
 
-pay.payCheck = prompt('Enter total paycheck', 'Cash money gang gang');//gets paycheck
+pay.payCheck = Number(prompt('Enter total paycheck', 'Cash money gang gang'));//gets paycheck
 
 let presetSelection = Number(prompt('Enter preset selection\n[1]Responsible Boi 10% donate 10% short 80% long 0% spend\n[2]Little Greed 5% donate 10% short 80% long 5% spend\n[3]Goblin 0% donate 10% short 80% long 10% spend\n[4]Custom', 'Enter a number')) //gets preset selection
     
@@ -83,4 +85,4 @@ pay.calculateNewSavings();//sets total savings
 pay.shortSavings = Number(prompt('Enter current short term savings', '(e.g 560)'));
 pay.longSavings = Number(prompt('Enter current long term savings', '(e.g. 10000)'));
 
-console.log(pay.documentInstructions());
+document.write(pay.documentInstructions());
