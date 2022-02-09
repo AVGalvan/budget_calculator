@@ -7,5 +7,5 @@ This budget calculator is a way for me to learn about developing stuff while mak
 * HTML
 
 ## Status
-Javascript has been added and a lot of the logic is there to make it functional. It mainly uses prompts to get user input so the next stage is using forms and such with html :) 
+Javascript has been added and a lot of the logic is there to make it functional. It mainly uses prompts to get user input so the next stage is to use actual webpage interactivity. Saving previous entries would also be cool.
 ![FunnyCalculator](confused_calculator_man.jpg)
