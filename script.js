@@ -75,7 +75,7 @@ const pay = {
 
 pay.payCheck = Number(prompt('Enter total paycheck', 'Cash money gang gang'));//gets paycheck
 
-let presetSelection = Number(prompt('Enter preset selection\n[1]Responsible Boi 10% donate 10% short 80% long 0% spend\n[2]Little Greed 5% donate 10% short 80% long 5% spend\n[3]Goblin 0% donate 10% short 80% long 10% spend\n[4]Custom', 'Enter a number')) //gets preset selection
+let presetSelection = Number(prompt('Enter preset selection\n[1]Philanthropic: 10% donate 10% short 80% long 0% spend\n[2]Pragmatic: 5% donate 10% short 80% long 5% spend\n[3]Goblin: 0% donate 10% short 80% long 10% spend\n[4]Custom', 'Enter a number')) //gets preset selection
     
 pay.setPercentages(presetSelection);//sets percentages based on preset selected
   
@@ -85,4 +85,4 @@ pay.calculateNewSavings();//sets total savings
 pay.shortSavings = Number(prompt('Enter current short term savings', '(e.g 560)'));
 pay.longSavings = Number(prompt('Enter current long term savings', '(e.g. 10000)'));
 
-document.write(pay.documentInstructions());
+console.log(pay.documentInstructions());
