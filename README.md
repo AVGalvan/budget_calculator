@@ -8,4 +8,4 @@ This budget calculator is a way for me to learn about developing stuff while mak
 
 ## Status
 Javascript has been added and a lot of the logic is there to make it functional. It mainly uses prompts to get user input so the next stage is to use actual webpage interactivity. Saving previous entries would also be cool.
-![FunnyCalculator](confused_calculator_man.jpg)
+![FunnyCalculator](images/confused_calculator_man.jpg)
