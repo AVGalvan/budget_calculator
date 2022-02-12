@@ -4,21 +4,22 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
     <title>Budget Calculator</title>
   </head>
   <body>
-    <script src="script.js"></script>
+    
     <header>
     <h1>Budget Calculator</h1>
-    <hr>
-    <p>A budget calculator with some saved presets, custom percentage entries, and an option for previous savings amounts. <b>Page currently non-funtional, solely for the benefit of future iterations</b></p>
+    <p>A budget calculator with some saved presets, custom percentage entries, and an option for previous savings amounts.<br> <b>Page currently non-funtional, solely for the benefit of future iterations</b></p>
     </header>
 
     <main>
       <section id="input">
       <h2>Input</h2>
       <h3>Presets</h3> <!--presets merely informational-->
-      <table>
+      <table class="center">
         <thead>
           <tr>
             <th>[1]Philanthropic</th>
@@ -58,29 +59,33 @@
         </tbody>
       </table>
       <h4>Enter Preset Number<br>(Bracketed Before Preset Title <i>e.g Enter 2 for Pragmatic</i>)</h4>
-      <p>Input element</p><!--some input element goes here-->
+      <input type="text" size="5"></input>
+      <br>
+      <br>
       <button>Calculate Budget</button>
 
       <h4>(Or) Enter Your Own Percentages</h4>
-      <p>Donate: $<span id="donate_percent_input">Donate Input</span></p>  <!--some input element goes here-->
-      <p>Short: $<span id="short_percent_input">Short Input</span></p> <!--some input element goes here-->
-      <p>Long: $<span id="long_percent_input">Long Input</span></p> <!--some input element goes here-->
-      <p>Spend: $<span id="spend_percent_input">Spend Input</span></p> <!--some input element goes here-->
-      
+      <p>Donate: $ <input type="text" size="10"></input></p>
+      <p>Short: $<input type="text" size="10"></input></p> 
+      <p>Long: $<input type="text" size="10"></input></p> 
+      <p>Spend: $<input type="text" size="10"></input></p> 
+      <br>
       <button>Calculate Budget</button>
     </section>
 
     <section id="output">
       <h2>Output</h2><!--should pop up once button is clicked-->
-      <p>Total amount to be transferred into savings: $<span id="total_savings_for_transfer">(Total Output Element)</span></p>
-      <p>Amount that is for long term savings: $<span id="long_transfer_amount">(Long Output Element)</span></p>
-      <p>Amount that is for short term savings: $<span id="short_transfer_amount">(Short Output Element)</span></p>
-      <p>New long: $<span id="new_long_savings">(New Long Output)</span></p>
-      <p>New short: $<span id="new_short_savings">(New Short Output)</span></p>
-      <p>Donate: $<span id="donate_amount">(Donate Amount Output)</span></p>
-      <p>Spend: $<span id="spend_amount">(Spend Amount Output)</span></p>
+      <p class="output">Total amount to be transferred into savings: $</p>
+      <p class="output">Amount that is for long term savings: $</p>
+      <p class="output">Amount that is for short term savings: $</p>
+      <p class="output">New long: $</p>
+      <p class="output">New short: $</p>
+      <p class="output">Donate: $</p>
+      <p class="output">Spend: $</p>
     </section>
   </main>
+  <br>
+  <hr>
   <footer id="contact">
     <p>Created by Axel Galvan</p>
     <p>Contact at: place.holder.email@gmail.com</p>
