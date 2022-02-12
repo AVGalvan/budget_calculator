@@ -8,70 +8,79 @@
   </head>
   <body>
     <script src="script.js"></script>
+    <header>
     <h1>Budget Calculator</h1>
     <hr>
     <p>A budget calculator with some saved presets, custom percentage entries, and an option for previous savings amounts. <b>Page currently non-funtional, solely for the benefit of future iterations</b></p>
+    </header>
 
-    <h2>Input</h2>
-    <h3>Presets</h3> <!--presets merely informational-->
-    <table>
-      <thead>
-        <tr>
-          <th>[1]Philanthropic</th>
-          <th>[2]Pragmatic</th>
-          <th>[3]Goblin</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td><!--data for philanthropic-->
-            <ul>
-            <li>10% donate</li>
-            <li>10% short</li>
-            <li>80% long</li>
-            <li>0% spend</li>
-          </ul>
-        </td>
-
-          <td><!--data for pragmatic-->
-            <ul>
-              <li>5% donate</li>
-              <li>10% short</li>
-              <li>80% long</li>
-              <li>5% spend</li>
-            </ul>
-          </td>
-          
-          <td>
-            <ul> <!--data for goblin-->
-              <li>0% donate</li>
-              <li>10% short</li>
-              <li>80% long</li>
-              <li>10% spend</li>
-            </ul>
-          </td>
+    <main>
+      <section id="input">
+      <h2>Input</h2>
+      <h3>Presets</h3> <!--presets merely informational-->
+      <table>
+        <thead>
+          <tr>
+            <th>[1]Philanthropic</th>
+            <th>[2]Pragmatic</th>
+            <th>[3]Goblin</th>
           </tr>
-      </tbody>
-    </table>
-    <h4>Enter Preset Number<br>(Bracketed Before Preset Title <i>e.g Enter 2 for Pragmatic</i>)</h4>
-    <p>Input element</p><!--some input element goes here-->
-    <button>Calculate Budget</button>
+        </thead>
+        <tbody>
+          <tr>
+            <td><!--data for philanthropic-->
+              <ul>
+              <li>10% donate</li>
+              <li>10% short</li>
+              <li>80% long</li>
+              <li>0% spend</li>
+            </ul>
+          </td>
 
-    <h4>(Or) Enter Your Own Percentages</h4>
-    <p>Donate: $<span id="donate_percent_input">Donate Input</span></p>  <!--some input element goes here-->
-    <p>Short: $<span id="short_percent_input">Short Input</span></p> <!--some input element goes here-->
-    <p>Long: $<span id="long_percent_input">Long Input</span></p> <!--some input element goes here-->
-    <p>Spend: $<span id="spend_percent_input">Spend Input</span></p> <!--some input element goes here-->
-    
-    <button>Calculate Budget</button>
-    <h2>Output</h2><!--should pop up once button is clicked-->
-    <p>Total amount to be transferred into savings: $<span id="total_savings_for_transfer">(Total Output Element)</span></p>
-    <p>Amount that is for long term savings: $<span id="long_transfer_amount">(Long Output Element)</span></p>
-    <p>Amount that is for short term savings: $<span id="short_transfer_amount">(Short Output Element)</span></p>
-    <p>New long: $<span id="new_long_savings">(New Long Output)</span></p>
-    <p>New short: $<span id="new_short_savings">(New Short Output)</span></p>
-    <p>Donate: $<span id="donate_amount">(Donate Amount Output)</span></p>
-    <p>Spend: $<span id="spend_amount">(Spend Amount Output)</span></p>
-    
+            <td><!--data for pragmatic-->
+              <ul>
+                <li>5% donate</li>
+                <li>10% short</li>
+                <li>80% long</li>
+                <li>5% spend</li>
+              </ul>
+            </td>
+            
+            <td>
+              <ul> <!--data for goblin-->
+                <li>0% donate</li>
+                <li>10% short</li>
+                <li>80% long</li>
+                <li>10% spend</li>
+              </ul>
+            </td>
+            </tr>
+        </tbody>
+      </table>
+      <h4>Enter Preset Number<br>(Bracketed Before Preset Title <i>e.g Enter 2 for Pragmatic</i>)</h4>
+      <p>Input element</p><!--some input element goes here-->
+      <button>Calculate Budget</button>
+
+      <h4>(Or) Enter Your Own Percentages</h4>
+      <p>Donate: $<span id="donate_percent_input">Donate Input</span></p>  <!--some input element goes here-->
+      <p>Short: $<span id="short_percent_input">Short Input</span></p> <!--some input element goes here-->
+      <p>Long: $<span id="long_percent_input">Long Input</span></p> <!--some input element goes here-->
+      <p>Spend: $<span id="spend_percent_input">Spend Input</span></p> <!--some input element goes here-->
+      
+      <button>Calculate Budget</button>
+    </section>
+
+    <section id="output">
+      <h2>Output</h2><!--should pop up once button is clicked-->
+      <p>Total amount to be transferred into savings: $<span id="total_savings_for_transfer">(Total Output Element)</span></p>
+      <p>Amount that is for long term savings: $<span id="long_transfer_amount">(Long Output Element)</span></p>
+      <p>Amount that is for short term savings: $<span id="short_transfer_amount">(Short Output Element)</span></p>
+      <p>New long: $<span id="new_long_savings">(New Long Output)</span></p>
+      <p>New short: $<span id="new_short_savings">(New Short Output)</span></p>
+      <p>Donate: $<span id="donate_amount">(Donate Amount Output)</span></p>
+      <p>Spend: $<span id="spend_amount">(Spend Amount Output)</span></p>
+    </section>
+  </main>
+
   </body>
 </html>
