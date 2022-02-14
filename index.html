@@ -4,21 +4,25 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="style.css">
-    <script src="script.js"></script>
+    <!-- <script src="script.js"></script> -->
     <title>Budget Calculator</title>
   </head>
   <body>
     
     <header>
     <h1>Budget Calculator</h1>
-    <p>A budget calculator with some saved presets, custom percentage entries, and an option for previous savings amounts.<br> <b>Page currently non-funtional, solely for the benefit of future iterations</b></p>
+    <p id="app-description">A budget calculator with some saved presets, custom percentage entries, and an option for previous savings amounts.<br> <b>Page currently non-funtional, solely for the benefit of future iterations</b></p>
     </header>
 
     <main>
       <section id="input">
-      <h2>Input</h2>
-      <h3>Presets</h3> <!--presets merely informational-->
+      <h2 class="bold">Input</h2>
+      <h3 class="bold ">Presets</h3> <!--presets merely informational-->
       <table class="center">
         <thead>
           <tr>
@@ -74,21 +78,20 @@
     </section>
 
     <section id="output">
-      <h2>Output</h2><!--should pop up once button is clicked-->
-      <p class="output">Total amount to be transferred into savings: $</p>
-      <p class="output">Amount that is for long term savings: $</p>
-      <p class="output">Amount that is for short term savings: $</p>
-      <p class="output">New long: $</p>
-      <p class="output">New short: $</p>
-      <p class="output">Donate: $</p>
-      <p class="output">Spend: $</p>
+      <h2 class="bold">Output</h2><!--should pop up once button is clicked-->
+      <p class="bold">Total amount to be transferred into savings: $</p>
+      <p class="bold">Amount that is for long term savings: $</p>
+      <p class="bold">Amount that is for short term savings: $</p>
+      <p class="bold">New long: $</p>
+      <p class="bold">New short: $</p>
+      <p class="bold">Donate: $</p>
+      <p class="bold">Spend: $</p>
     </section>
   </main>
   <br>
   <hr>
   <footer id="contact">
-    <p>Created by Axel Galvan</p>
-    <p>Contact at: place.holder.email@gmail.com</p>
+    <p>Created by Axel Galvan<br>Contact at: place.holder.email@gmail.com</p>
   </footer>
 
   </body>
